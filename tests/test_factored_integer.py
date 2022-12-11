@@ -1,7 +1,9 @@
 import pytest
 
-from factored_integer.factored_integer import (convert_factorized_to_int,
-                                               convert_int_to_factorization, FactoredInteger, get_modulo_power)
+from factored_integer.factored_integer import (FactoredInteger,
+                                               convert_factorized_to_int,
+                                               convert_int_to_factorization,
+                                               get_modulo_power)
 from tests.test_primes import PRIMES
 
 

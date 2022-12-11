@@ -1,5 +1,4 @@
-from functools import lru_cache, reduce
-from typing import Dict
+from functools import lru_cache
 
 
 @lru_cache(maxsize=None)
@@ -13,6 +12,7 @@ def get_prime_by_index(i=0):
         n += 1
     return n
 
+
 def is_prime(n: int):
     i = 0
     p = get_prime_by_index(i)
@@ -23,4 +23,3 @@ def is_prime(n: int):
             i += 1
             p = get_prime_by_index(i)
     return False
-
