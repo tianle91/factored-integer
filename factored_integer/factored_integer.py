@@ -52,6 +52,9 @@ class FactoredInteger:
             new_factorization[k] = self_v + other_v
         return FactoredInteger(factorization=new_factorization)
 
+    def pow(self, n: int) -> FactoredInteger:
+        return FactoredInteger(factorization={k: n * v for k, v in self.factorization.items()})
+
     def mod(self, q: int) -> int:
         r = None
         for p, k in self.factorization.items():

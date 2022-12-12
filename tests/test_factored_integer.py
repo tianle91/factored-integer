@@ -73,6 +73,21 @@ def test_factored_integer_mult(a: int, b: int):
 
 
 @pytest.mark.parametrize(
+    ('a', 'b'),
+    [
+        pytest.param(2, 2),
+        pytest.param(4, 2),
+        pytest.param(5, 2),
+        pytest.param(25, 4),
+    ]
+)
+def test_factored_integer_pow(a: int, b: int):
+    expected = a ** b
+    actual = FactoredInteger(val=a).pow(n=b).as_int()
+    assert actual == expected
+
+
+@pytest.mark.parametrize(
     ('r', 'q', 'pow'),
     [
         pytest.param(1, 2, 1),
